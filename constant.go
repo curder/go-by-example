@@ -5,14 +5,14 @@ import "math"
 
 const s string = "constant"
 
-func main()  {
+func main() {
 	fmt.Println(s)
 
 	// const可以出现在任何允许var出现的地方
 	const n = 500000000
 
 	// 常数表达式可以执行任意精度的运算
-	const d =3e20 / n
+	const d = 3e20 / n
 	fmt.Println(d)
 
 	// 数值型常量是没有确定的类型的，直到它们被给定了一个类型，比如说一次显示的类型转化。

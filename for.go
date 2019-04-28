@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // for 是 go 语言唯一的循环结构，
-func main()  {
+func main() {
 	i := 0
 	for i <= 3 {
 		fmt.Println(i)

@@ -3,14 +3,14 @@ package main
 import "fmt"
 import "time"
 
-func main()  {
+func main() {
 	i := 2
 
 	fmt.Println("write ", i, " as ")
 
 	// 基本的 switch 结构
 	switch i {
-	case 1 :
+	case 1:
 		fmt.Println("one")
 	case 2:
 		fmt.Println("two")
