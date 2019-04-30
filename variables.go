@@ -5,8 +5,22 @@ package main
 // 2. 根据变量值自动判断变量类型（类型推导）
 // 3. 使用 := 的方式声明并赋值，但是变量名不应该是已经声明过的，否则会导致编译出错
 
+<<<<<<< HEAD
 // Go 多变量声明，在同一行声明多个变量
+=======
+// Go 多变量声明，允许在同一行声明多个变量
+>>>>>>> variables
 import "fmt"
+
+// 声明全局变量
+var ga = 1
+var gb = "name"
+var gc = 3
+var (
+	gd = 2
+	ge = "name"
+	gf = 4
+)
 
 func main() {
 	// 声明变量且没有给出对应的初始值时，变量将会初始化为 零 值
@@ -32,4 +46,15 @@ func main() {
 	// 声明多个不同类型的变量
 	g, h, i := 10, "name", 11
 	fmt.Println(g, h, i)
+
+	// 使用 () 定义多个变量
+	var (
+		j = 1
+		k = 2
+		l = 3
+	)
+	fmt.Println(j, k, l)
+
+	// 打印全局变量
+	fmt.Println(ga, gb, gc, gd, ge, gf)
 }
