@@ -40,6 +40,15 @@ func main() {
 	fmt.Printf("f1: %T\n", f1) // go语言中默认的浮点型为float64类型
 
 	// 布尔型
+	// Go语言中以bool类型进行声明布尔型数据，布尔型数据只有 true（真）和 false（假）两个值。
+	// 布尔类型变量的默认值为false。
+	// Go 语言中不允许将整型强制转换为布尔型.
+	// 布尔型无法参与数值运算，也无法与其他类型进行转换。
+	b1 := true
+	var b2 bool // 默认值是 flase
+	fmt.Printf("%T\n", b1)
+	fmt.Printf("%T\n", b2)
+
 	fmt.Println(true && false)
 	fmt.Println(true || false)
 	fmt.Println(!true)
