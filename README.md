@@ -1,6 +1,6 @@
 ## 章节导航
 
-- [Hello World](hello_world.go)
-- [值](values.go)
-- [变量](variables.go)
-- [常量](constant.go)
+- [Hello World](src/hello-world/main.go)
+- [值](src/values/main.go)
+- [变量](src/variables/main.go)
+- [常量](src/constant/main.go)
