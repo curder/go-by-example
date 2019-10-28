@@ -36,6 +36,9 @@ func main() {
 	// 浮点数运算
 	fmt.Println("7.0 / 3.0 = ", 7.0/3.0)
 
+	f1 := 1.23
+	fmt.Printf("f1: %T\n", f1) // go语言中默认的浮点型为float64类型
+
 	// 布尔型
 	fmt.Println(true && false)
 	fmt.Println(true || false)
