@@ -8,3 +8,4 @@
 - [if判断](src/if-else/main.go)
 - [for循环](src/for/main.go)
 - [switch流程控制](src/for/main.go)
+- [操作符](src/operators/main.go)
