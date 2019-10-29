@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	// 当需要转义 \ 的时候，可以使用 \\ 转义 \
@@ -53,4 +56,22 @@ Volumes
 	runeS6[0] = '绿'
 	fmt.Printf("s6: %s\n", string(runeS6))
 
+	// 分割字符串
+	s7 := "hello world"
+	s8 := strings.Split(s7, " ")
+	fmt.Println(s8)
+
+	// join操作
+	fmt.Println(strings.Join(s8, "|"))
+
+	// 判断是否保存某个子字符串
+	fmt.Printf("%v\n", strings.Contains("hello world", "hello"))
+
+	// 前后缀判断
+	fmt.Printf("hello world 包含前缀 hello吗？ %v\n", strings.HasPrefix("hello world", "hello"))
+	fmt.Printf("hello world 包含后缀 world吗？ %v\n", strings.HasSuffix("hello world", "world"))
+
+	// 查找子字符串位置
+	fmt.Printf("hello world 中第一个o出现的索引位置是：%d\n", strings.Index("hello world", "o"))
+	fmt.Printf("hello world 中第一个a出现的索引位置是：%d\n", strings.Index("hello world", "a")) // 不存在子字符串默认返回 -1
 }
