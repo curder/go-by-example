@@ -6,3 +6,4 @@
 - [常量](src/constant/main.go)
 - [字符串](src/string/main.go)
 - [if判断](src/if-else/main.go)
+- [for循环](src/for/main.go)
