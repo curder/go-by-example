@@ -10,3 +10,4 @@
 - [switch流程控制](src/for/main.go)
 - [操作符](src/operators/main.go)
 - [数组](src/array/main.go)
+- [切片](src/slices/main.go)
