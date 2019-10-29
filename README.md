@@ -7,3 +7,4 @@
 - [字符串](src/string/main.go)
 - [if判断](src/if-else/main.go)
 - [for循环](src/for/main.go)
+- [switch流程控制](src/for/main.go)
