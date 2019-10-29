@@ -29,9 +29,9 @@ func main() {
 
 	println("99乘法表")
 	// 99乘法表
-	for x := 1; x <= 9 ; x++  {
-		for y := 1; y <= x ; y++  {
-			fmt.Printf("%d * %d = %d " , x, y, x * y )
+	for x := 1; x <= 9; x++ {
+		for y := 1; y <= x; y++ {
+			fmt.Printf("%d * %d = %d ", x, y, x*y)
 		}
 		fmt.Println()
 	}
