@@ -32,7 +32,6 @@ func main() {
 	i4 := int8(32)
 	fmt.Printf("%T\n", i4)
 
-
 	// 浮点数运算
 	fmt.Println("7.0 / 3.0 = ", 7.0/3.0)
 
