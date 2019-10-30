@@ -1,7 +1,10 @@
 // Slice 是 Go 中一个关键的数据类型，是一个比数组更加强大的序列接口 http://blog.golang.org/2011/01/go-slices-usage-and-internals.html
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	// 不像数组，slice 的类型仅有它所包含的元素决定（不像数组中还需要元素的个数）。要创建一个长度非零的空slice，需要使用内建的方法 `make`。
@@ -67,7 +70,8 @@ func main() {
 	}
 
 	// 作为基本操作的补充，slice 支持比数组更多的操作。
-	// 其中一个是内建的 `append`，它返回一个包含了一个或者多个新值的 slice。注意接受返回值由 append 返回的新的 slice 值。
+	// 其中一个是内建的 `append`，它返回一个包含了一个或者多个新值的 slice。
+	// 注意：必须使用原切片变量接收返回值由 append 操作返回的新的切片值。
 	s8 := []string{"beijing", "shanghai", "guangzhou"}
 	s8 = append(s8, "shenzhen")
 	s8 = append(s8, "chengdu", "hangzhou")
@@ -75,20 +79,27 @@ func main() {
 
 	// 切片追加切片
 	s9 := []string{"suzhou", "wuhan", "xian"}
-	s8 = append(s8, s9...)
+	s8 = append(s8, s9...) // 将切片s9追加到切片s8
 	fmt.Printf("切片 append 追加切片操作，其中值为：%v，长度为%v，容量为%v \n", s8, len(s8), cap(s8))
 
-	// Slice 也可以被 `copy`。这里我们创建一个空的和 `s` 有相同长度的 slice `c`，并且将 `s` 复制给 `c`。
-	s10 := make([]string, len(s))
-	copy(s10, s)
-	fmt.Println("切片的拷贝:", s10)
+	// Slice 也可以被 `copy`。创建一个空的和 `s` 有相同长度的切片 `c`，并且将 `s` 复制给 `c`。
+	s10 := []string{"a", "b", "c"}
+	s11 := make([]string, len(s10))
+	copy(s11, s10)
+	fmt.Println("切片的拷贝，s11的值:", s11)
+
+	// Go语言中并没有删除切片元素的专用方法，可以使用切片本身的特性来删除元素。
+	// 例如：从切片中删除元素索引为2的元素
+	s12 := []int{1,2,3,4,5,6,7,8,9}
+	s12 = append(s12[:2], s12[3:]...)
+	fmt.Printf("切片中删除索引为2的值后，新切片s12的值为：%v", s12) // 从切片a中删除索引为index的元素，操作方法是 a = append(a[:index], a[index+1:]...)
 
 	// Slice 支持通过 `slice[low:high]` 语法进行“切片”操作。例如，这里得到一个包含元素 `s[2]`, `s[3]`, `s[4]` 的 slice。
-	l := s[4:5]
-	fmt.Println(l)
+	s13 := s[4:5]
+	fmt.Printf("切片s13的值为：%v",s13)
 
 	// slice 从 `s[0]` 到（但是不包含）`s[5]`。
-	l = s[:5]
+	l := s[:5]
 	fmt.Println("sl2:", l)
 
 	// slice 从（包含）`s[2]` 到 slice 的后一个值。
@@ -109,4 +120,10 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD)
+
+	// 切片的排序
+	s20 := []int{1,9,5,6,7,3,2,8,4}
+	sort.Ints(s20)
+	fmt.Printf("对切片s20进行排序后的切片s20的值：%v", s20)
+
 }
