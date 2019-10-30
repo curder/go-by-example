@@ -13,3 +13,4 @@
 - [切片](src/slices/main.go)
 - [指针](src/pointers/main.go)
 - [Map](src/maps/main.go)
+- [函数](src/functions/main.go)
