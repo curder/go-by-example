@@ -34,12 +34,64 @@ func f5(arg1, arg2 int, arg3, arg4, arg5 string, arg6, arg7, arg8 bool) bool {
 }
 
 // 可变长参数
-func f6(arg1 string, arg2... int) bool {
+func f6(arg1 string, arg2 ... int) bool {
 	fmt.Println(arg1)
 	fmt.Println(arg2) // arg2的类型是切片 []int
 	return false
 }
 
+// 函数中的延迟执行 defer
+// Go语言中的defer语句会将其后面跟随的语句进行延迟处理。
+// 在defer归属的函数即将返回时，将延迟处理的语句按defer定义的逆序进行执行，也就是说，先被defer的语句最后被执行，最后被defer的语句，最先被执行。
+func f7() {
+	fmt.Println("执行函数f7开始")
+	defer fmt.Println(1)
+	defer fmt.Println(2)
+	fmt.Println("执行函数f7结束")
+}
+
+// 函数中return语句在底层并不是原子操作，它分为给返回值赋值和RET指令两步。而defer语句执行的时机就在返回值赋值操作后，RET指令执行前。
+// 第一步赋值
+// defer
+// 第二步真正的return返回
+// 函数中存在defer，那么defer执行的时机是在第一步和第二步之间
+func f8() int { // 返回值为 5
+	x := 5
+	defer func() {
+		x++
+	}()
+	return x
+}
+
+func f9() (x int) { // 返回值为 6 注意这里的返回值是命名变量 x
+	defer func() {
+		x++
+	}()
+	return 5
+}
+
+func f10() (y int) { // 返回值为 5
+	x := 5
+	defer func() {
+		x++
+	}()
+	return x
+}
+func f11() (x int) { // 返回值是 5
+	defer func(x int) {
+		x++
+	}(x)
+	return 5
+}
+
 func main() {
 	fmt.Printf("1 + 2 = %d\n", Plus(1, 2))
+	f7()
+
+	fmt.Println("defer")
+
+	fmt.Println(f8())  // 5
+	fmt.Println(f9())  // 6
+	fmt.Println(f10()) // 5
+	fmt.Println(f11()) // 5
 }
