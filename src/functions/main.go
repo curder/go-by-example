@@ -117,6 +117,14 @@ func f17(x func() int) func(int, int) int {
 	return f16
 }
 
+// 闭包函数；闭包 = 函数 + 外部变量的引用
+// 闭包函数包含了它外部的作用域变量
+func f18(x int) func(int) int {
+	return func(y int) int {
+		return x + y
+	}
+}
+
 func main() {
 	fmt.Printf("1 + 2 = %d\n", Plus(1, 2))
 	f7()
@@ -135,4 +143,6 @@ func main() {
 	f15(f14) // 传递函数类型参数
 
 	fmt.Printf("函数f17返回的是函数类型的值：%T\n", f17(f14))
+
+	fmt.Println("执行闭包函数f18的值为：", f18(200)(100))
 }

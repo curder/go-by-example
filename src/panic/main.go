@@ -3,10 +3,11 @@ package main
 
 import "os"
 
+// panic 和 recover
 func main() {
 
 	// 将在整个网站中使用 panic 来检查预期外的错误
-	panic("a problem")
+	panic("程序崩溃退出了")
 
 	// panic 的一个基本用法就是在一个函数返回了错误值但是我们并不知道（或者不想）处理时终止运行
 	// 这里是一个在创建一个新文件时返回异常错误时的 `panic` 用法
