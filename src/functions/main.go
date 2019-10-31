@@ -84,6 +84,17 @@ func f11() (x int) { // 返回值是 5
 	return 5
 }
 
+// 函数的作用域
+// 1. 如果在函数中找到了变量的定义，则使用函数内的变量；否则使用全局的变量；如果全局变量都没有，则报错。
+// 2. 函数体内定义的变量，无法在函数体外使用。
+// 3. if条件判断、for循环、switch语句定义的变量，只能在语句块中使用。
+var v1 = 1
+func f12()  {
+	// v1 := 111
+	fmt.Println(v1)
+}
+
+
 func main() {
 	fmt.Printf("1 + 2 = %d\n", Plus(1, 2))
 	f7()
@@ -94,4 +105,5 @@ func main() {
 	fmt.Println(f9())  // 6
 	fmt.Println(f10()) // 5
 	fmt.Println(f11()) // 5
+	f12() // 1
 }
