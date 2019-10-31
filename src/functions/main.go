@@ -89,11 +89,33 @@ func f11() (x int) { // 返回值是 5
 // 2. 函数体内定义的变量，无法在函数体外使用。
 // 3. if条件判断、for循环、switch语句定义的变量，只能在语句块中使用。
 var v1 = 1
-func f12()  {
+
+func f12() {
 	// v1 := 111
 	fmt.Println(v1)
 }
 
+// 函数类型
+func f13() {
+	fmt.Println("Hello World")
+}
+func f14() int {
+	return 1
+}
+
+// 函数作为参数类型
+func f15(x func() int) {
+	var ret = x()
+	fmt.Println(ret)
+}
+
+// 函数作为返回值
+func f16(a, b int) int {
+	return a + b
+}
+func f17(x func() int) func(int, int) int {
+	return f16
+}
 
 func main() {
 	fmt.Printf("1 + 2 = %d\n", Plus(1, 2))
@@ -105,5 +127,12 @@ func main() {
 	fmt.Println(f9())  // 6
 	fmt.Println(f10()) // 5
 	fmt.Println(f11()) // 5
-	f12() // 1
+	f12()              // 1
+
+	v13 := f13 // 将函数赋值给变量，函数变量
+	fmt.Printf("f13的类型是：%T, f14的类型是：%T \n", v13, f14)
+
+	f15(f14) // 传递函数类型参数
+
+	fmt.Printf("函数f17返回的是函数类型的值：%T\n", f17(f14))
 }
