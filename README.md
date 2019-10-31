@@ -14,4 +14,5 @@
 - [指针](src/pointers/main.go)
 - [Map](src/maps/main.go)
 - [函数](src/functions/main.go)
+  - [fmt](src/functions/fmt/main.go)
 - [Panic](src/panic/main.go)
