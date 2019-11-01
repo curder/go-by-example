@@ -28,7 +28,7 @@ type Person struct {
 // 字段类型：表示结构体字段的具体类型。
 
 func TestStructureDefinition(t *testing.T) {
-	var v1 Person      // 声明 Person 类型的变量 v1
+	var v1 Person      // 声明 NewPerson 类型的变量 v1
 	v1.name = "curder" // 赋值
 	v1.age = 28
 	v1.gender = "男"
