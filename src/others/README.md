@@ -1,0 +1,2 @@
+- [小案例](/src/others/cases/README.md)
+    - [根据人名分金币](/src/others/cases/gold_coins/main.go)

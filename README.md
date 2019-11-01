@@ -16,3 +16,6 @@
 - [函数](src/functions/main.go)
   - [fmt](src/functions/fmt/main.go)
 - [Panic](src/panic/main.go)
+
+- [小案例](/src/others/cases/README.md)
+    - [根据人名分金币](/src/others/cases/gold_coins/main.go)
