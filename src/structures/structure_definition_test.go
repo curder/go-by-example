@@ -36,3 +36,18 @@ func TestStructureDefinition(t *testing.T) {
 
 	t.Logf("结构体v1的类型是：%T\n名字：%s \n年龄：%d\n性别：%s\n爱好：%#v\n", v1, v1.name, v1.age, v1.gender, v1.hobby) // 获取结构体值
 }
+
+
+// 匿名结构体
+
+func TestAnonymousStructure(t *testing.T) {
+	var s1 struct {
+		name string
+		age  int
+	}
+
+	s1.name = "curder"
+	s1.age = 28
+
+	t.Logf("\n匿名结构体的类型：%T\n姓名：%s\n年龄：%d\n", s1, s1.name, s1.age)
+}
