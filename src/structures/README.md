@@ -1,0 +1,2 @@
+- [自定义类型](/src/structures/custom_type_test.go)
+- [类型别名](/src/structures/type_alias_test.go)
