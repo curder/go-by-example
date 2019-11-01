@@ -1,7 +1,6 @@
 package structures
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -35,5 +34,5 @@ func TestStructureDefinition(t *testing.T) {
 	v1.gender = "男"
 	v1.hobby = []string{"coding", "music", "movies"}
 
-	fmt.Printf("结构体v1的类型是：%T\n名字：%s \n年龄：%d\n性别：%s\n爱好：%#v\n", v1, v1.name, v1.age, v1.gender, v1.hobby) // 获取结构体值
+	t.Logf("结构体v1的类型是：%T\n名字：%s \n年龄：%d\n性别：%s\n爱好：%#v\n", v1, v1.name, v1.age, v1.gender, v1.hobby) // 获取结构体值
 }
