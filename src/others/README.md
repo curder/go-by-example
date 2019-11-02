@@ -1,3 +1,4 @@
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
     - [递归](/src/others/cases/recursive/main.go)
+    - [学员增删查操作-函数版](/src/others/cases/student_manager_system_by_function/main.go)
