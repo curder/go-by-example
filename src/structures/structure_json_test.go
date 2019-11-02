@@ -28,7 +28,7 @@ func TestStructureAndJson(t *testing.T)  {
 	var p3 JsonPerson
 	v1 := `{"name": "luo", "age": 28}`
 	error = json.Unmarshal([]byte(v1), &p3)
-	if(error != nil) {
+	if error != nil {
 		t.Logf("unmashl error %v", error)
 		return
 	}
