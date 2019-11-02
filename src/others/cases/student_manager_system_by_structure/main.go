@@ -29,9 +29,15 @@ func (c Class) Store() {
 	)
 	// 获取用户输入
 	fmt.Print("请输入学员编号：")
-	fmt.Scanln(&id)
+	if _, error := fmt.Scanln(&id); error != nil {
+		fmt.Print("错误的学员编号输入")
+		return
+	}
 	fmt.Print("请输入学员姓名：")
-	fmt.Scanln(&name)
+	if _, error := fmt.Scanln(&name); error != nil {
+		fmt.Print("错误的学员姓名输入")
+		return
+	}
 	c.students[id] = &Student{id: id, name: name}
 
 	c.Index()
@@ -42,7 +48,15 @@ func (c Class) Delete() {
 	var id int
 	// 根据用户输入用的ID删除对应的map数据
 	fmt.Print("请输入要删除的学员编号：")
-	fmt.Scanln(&id)
+	if _, error := fmt.Scanln(&id); error != nil {
+		fmt.Print("错误的学员编号输入")
+		return
+	}
+
+	if _, isSaved := c.students[id]; !isSaved {
+		fmt.Print("该编号学员不存在")
+		return
+	}
 
 	delete(c.students, id)
 
