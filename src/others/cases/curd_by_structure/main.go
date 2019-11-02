@@ -43,6 +43,38 @@ func (c Class) Store() {
 	c.Index()
 }
 
+// Update 更新
+func (c Class) Update() {
+	var (
+		id   int
+		name string
+	)
+	// 获取用户输入
+	fmt.Print("请输入学员编号：")
+	if _, error := fmt.Scanln(&id); error != nil {
+		fmt.Print("错误的学员编号输入")
+		return
+	}
+
+	// 判断学员编号是否存在
+	if _, hasStudent := c.students[id]; !hasStudent {
+		fmt.Print("该编号学员不存在")
+		return
+	}
+
+	fmt.Print("请输入学员姓名：")
+	if _, error := fmt.Scanln(&name); error != nil {
+		fmt.Print("错误的学员编号姓名")
+		return
+	}
+
+	student := &Student{id: id, name: name}
+
+	c.students[id] = student
+
+	c.Index()
+}
+
 // Delete 删除
 func (c Class) Delete() {
 	var id int
@@ -71,8 +103,9 @@ func main() {
 操作列表如下：
 1. 列表
 2. 新增
-3. 删除
-4. 退出操作
+3. 编辑
+4. 删除
+5. 退出操作
 请输入您要操作的动作：`)
 		var input int
 		fmt.Scanln(&input)
@@ -84,9 +117,12 @@ func main() {
 			fmt.Println("新增")
 			c.Store()
 		case 3:
+			fmt.Println("编辑")
+			c.Update()
+		case 4:
 			fmt.Println("删除")
 			c.Delete()
-		case 4:
+		case 5:
 			os.Exit(1)
 		default:
 			fmt.Println("输入有误，请重新输入!")
