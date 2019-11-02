@@ -16,6 +16,12 @@
 - [函数](/src/functions/main.go)
   - [fmt](/src/functions/fmts/main.go)
 - [Panic](/src/panic/main.go)
+- [结构体](/src/structures/README.md)
+  - [自定义类型](/src/structures/custom_type_test.go)
+  - [类型别名](/src/structures/type_alias_test.go)
+  - [结构体的定义](/src/structures/structure_definition_test.go)
+  - [结构体指针](/src/structures/structure_pointer_test.go)
+  - [结构体继承](/src/structures/structure_extension_test.go)
 
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
