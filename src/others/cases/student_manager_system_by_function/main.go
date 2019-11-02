@@ -27,9 +27,15 @@ func Store() {
 	)
 	// 获取用户输入
 	fmt.Print("请输入学员编号：")
-	fmt.Scanln(&id)
+	if _, error := fmt.Scanln(&id); error != nil {
+		fmt.Print("错误的学员编号输入")
+		return
+	}
 	fmt.Print("请输入学员姓名：")
-	fmt.Scanln(&name)
+	if _, error := fmt.Scanln(&name); error != nil {
+		fmt.Print("错误的学员姓名输入")
+		return
+	}
 	Class[id] = &Student{id: id, name: name}
 }
 
@@ -38,7 +44,15 @@ func Delete() {
 	var id int
 	// 根据用户输入用的ID删除对应的map数据
 	fmt.Print("请输入要删除的学员编号：")
-	fmt.Scanln(&id)
+	if _, error := fmt.Scanln(&id); error != nil {
+		fmt.Print("错误的学员编号输入")
+		return
+	}
+
+	if _, isSaved := Class[id]; !isSaved {
+		fmt.Print("该编号学员不存在")
+		return
+	}
 
 	delete(Class, id)
 
@@ -55,7 +69,10 @@ func main() {
 4. 退出操作
 请输入您要操作的动作：`)
 		var input int
-		fmt.Scanln(&input)
+		if _, error := fmt.Scanln(&input); error != nil {
+			fmt.Print("操作输入错误")
+			return
+		}
 		switch input {
 		case 1:
 			fmt.Println("列表")

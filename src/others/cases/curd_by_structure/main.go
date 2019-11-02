@@ -108,7 +108,10 @@ func main() {
 5. 退出操作
 请输入您要操作的动作：`)
 		var input int
-		fmt.Scanln(&input)
+		if _, error := fmt.Scanln(&input); error != nil {
+			fmt.Print("操作输入错误")
+			return
+		}
 		switch input {
 		case 1:
 			fmt.Println("列表")
