@@ -63,3 +63,36 @@ func TestAnonymousFieldStructure(t *testing.T) {
 
 	t.Logf("\n匿名结构体p1的值为：%#v \n通过类型为key获取值，int的值为：%#v string的值为：%#v\n", p1, p1.int, p1.string)
 }
+
+// 嵌套结构体
+
+func TestNestedStructure(t *testing.T) {
+
+	type Address struct {
+		province string
+		city     string
+	}
+
+	type Person struct {
+		name    string
+		age     int
+		Address // 匿名嵌套结构体 Address
+	}
+
+	type Company struct {
+		name    string
+		address Address
+	}
+
+	p1 := Person{
+		name: "curder",
+		age:  28,
+		Address: Address{
+			province: "jx",
+			city:     "zs",
+		},
+	}
+
+	t.Logf("\n结构体详细值：%#v\n", p1)
+	t.Logf("\n省份：%v\n", p1.province) // 通过p1.province访问结构体内容是一个go语言的语法糖，需要保证是匿名嵌套结构体
+}
