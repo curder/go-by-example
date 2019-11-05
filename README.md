@@ -23,6 +23,8 @@
   - [结构体指针](/src/structures/structure_pointer_test.go)
   - [结构体继承](/src/structures/structure_extension_test.go)
 - [接口](/src/interfaces/main.go)
+  - [接口定义](/src/interfaces/interface_definition_test.go)
+  - [接口的实现](/src/interfaces/interface_achieve_test.go)
 
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
