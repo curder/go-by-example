@@ -2,3 +2,5 @@
 - [递归](/src/others/cases/recursive/main.go)
 - [学员增删改查操作-函数版](/src/others/cases/curd_by_function/main.go)
 - [学员增删改查操作-方法版](/src/others/cases/curd_by_structure/main.go)
+- [读文件](/src/others/cases/file/read_file.go)
+- [写文件](/src/others/cases/file/write_file.go)
