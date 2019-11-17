@@ -37,7 +37,7 @@ func TestEmptyInterfaceForFunction(t *testing.T) {
 // 空接口可以存储任意类型的值，那我们如何获取其存储的具体数据呢？
 
 func TestEmptyInterfaceTypeAssertion(t *testing.T) {
-	var x interface{}
+	var x interface{} // 定义一个空接口类型变量 a
 	x = "hello world!"
 	_, ok := x.(string)
 	if ok {
