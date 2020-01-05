@@ -25,11 +25,11 @@
 - [接口](/src/interfaces/main.go)
   - [接口定义](/src/interfaces/interface_definition_test.go)
   - [接口的实现](/src/interfaces/interface_achieve_test.go)
-
 - [时间和时间戳](/src/time/time_test.go)
   - [定时器](/src/time/timer_test.go)
   - [时间间隔](/src/time/time_duration_test.go)
   - [时间格式化](/src/time/time_format_test.go)
+- [日志](src/log/main.go)
 
 
 - [小案例](/src/others/cases/README.md)
