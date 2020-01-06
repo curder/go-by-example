@@ -1,10 +1,12 @@
 package logger
 
-import "testing"
+import (
+	"testing"
+)
 
 // 向终端写日志相关内容
 func TestTerminalLogger(t *testing.T) {
-	log := NewLog("fatal")
+	log := NewLog("error")
 
 	log.Debug("this is a debug log.")
 	log.Trace("this is a trace log.")

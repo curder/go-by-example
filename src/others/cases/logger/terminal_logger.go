@@ -2,6 +2,8 @@ package logger
 
 import (
 	"fmt"
+	"path"
+	"runtime"
 	"strings"
 	"time"
 )
@@ -48,49 +50,85 @@ func parseLogLevel(s string) LogLevel {
 	}
 }
 
+func getLogLevel(logLevel LogLevel) string  {
+	switch logLevel {
+	case DEBUG:
+		return "DEBUG"
+	case TRACE:
+		return "TRADE"
+	case INFO:
+		return "INFO"
+	case WARNING:
+		return "WARNING"
+	case ERROR:
+		return "ERROR"
+	case FATAL:
+		return "FATAL"
+	default:
+		return "DEBUG"
+	}
+}
+
 // 判断日志级别是否允许打印日志
 func (l Logger) enable(logLevel LogLevel) bool {
 	return logLevel >= l.Level
 }
 
+// 获取执行的文件名，函数名和行号
+func getInfo(skip int) (fileName string, funcName string, line int){
+	// file 文件名；line 行；ok 状态
+	pc, file, line, ok := runtime.Caller(skip)
+
+	if !ok {
+		fmt.Printf("runtime.Caller() faild, error: %v \n", ok)
+	}
+	fileName = path.Base(file)
+
+	funcName = strings.Split(path.Base(runtime.FuncForPC(pc).Name()), ".")[1]
+
+	return
+}
+
+// 记录日志
+func (l Logger) log(logLevel LogLevel, msg string) {
+	level := getLogLevel(logLevel)
+	now := time.Now()
+	fileName, filePath, line := getInfo(3)
+	fmt.Printf("[%s] [%s] [%s:%s:%d] %s\n", now.Format("2006-01-02 15:04:05"), level, fileName, filePath, line, msg)
+}
+
 func (l Logger) Debug(msg string) {
 	if l.enable(DEBUG) {
-		now := time.Now()
-		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "DEBUG", msg)
+		l.log(DEBUG, msg)
 	}
 }
 
 func (l Logger) Trace(msg string) {
 	if l.enable(TRACE) {
-		now := time.Now()
-		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "TRACE", msg)
+		l.log(TRACE, msg)
 	}
 }
 
 func (l Logger) Info(msg string) {
 	if l.enable(INFO) {
-		now := time.Now()
-		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "INFO", msg)
+		l.log(INFO, msg)
 	}
 }
 
 func (l Logger) Warning(msg string) {
 	if l.enable(WARNING) {
-		now := time.Now()
-		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "WARNING", msg)
+		l.log(WARNING, msg)
 	}
 }
 
 func (l Logger) Error(msg string) {
 	if l.enable(ERROR) {
-		now := time.Now()
-		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "ERROR", msg)
+		l.log(ERROR, msg)
 	}
 }
 
 func (l Logger) Fatal(msg string) {
 	if l.enable(FATAL) {
-		now := time.Now()
-		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "FATAL", msg)
+		l.log(FATAL, msg)
 	}
 }
