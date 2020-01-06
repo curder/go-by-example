@@ -3,7 +3,7 @@ package logger
 import "testing"
 
 // 向终端写日志相关内容
-func TestTerminalLogger(t *testing.T)  {
+func TestTerminalLogger(t *testing.T) {
 	log := NewLog("fatal")
 
 	log.Debug("this is a debug log.")

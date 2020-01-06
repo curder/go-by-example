@@ -50,7 +50,7 @@ func parseLogLevel(s string) LogLevel {
 
 // 判断日志级别是否允许打印日志
 func (l Logger) enable(logLevel LogLevel) bool {
-	return l.Level > logLevel
+	return logLevel >= l.Level
 }
 
 func (l Logger) Debug(msg string) {
@@ -84,7 +84,7 @@ func (l Logger) Warning(msg string) {
 func (l Logger) Error(msg string) {
 	if l.enable(ERROR) {
 		now := time.Now()
-		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "ERROR", msg);
+		fmt.Printf("[%s] [%s] %s\n", now.Format("2006-01-02 15:04:05"), "ERROR", msg)
 	}
 }
 
