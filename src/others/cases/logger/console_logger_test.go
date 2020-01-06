@@ -5,8 +5,8 @@ import (
 )
 
 // 向终端写日志相关内容
-func TestTerminalLogger(t *testing.T) {
-	log := NewLog("error")
+func TestConsoleLogger(t *testing.T) {
+	log := NewConsoleLog("error")
 
 	log.Debug("this is a debug log.")
 	log.Trace("this is a trace log.")
