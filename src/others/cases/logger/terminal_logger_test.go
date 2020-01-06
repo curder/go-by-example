@@ -13,5 +13,5 @@ func TestTerminalLogger(t *testing.T) {
 	log.Info("this is a info log.")
 	log.Warning("this is a warning log.")
 	log.Error("this is a error log.")
-	log.Fatal("this is a fatal log.")
+	log.Fatal("this is a fatal log. username: %s, age: %d", "curder", 28)
 }
