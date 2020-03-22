@@ -73,17 +73,6 @@ func main() {
 	}
 
 	// 作为基本操作的补充，slice 支持比数组更多的操作。
-	// 其中一个是内建的 `append`，它返回一个包含了一个或者多个新值的 slice。
-	// 注意：必须使用原切片变量接收返回值由 append 操作返回的新的切片值。
-	s8 := []string{"beijing", "shanghai", "guangzhou"}
-	s8 = append(s8, "shenzhen")
-	s8 = append(s8, "chengdu", "hangzhou")
-	fmt.Printf("切片 append 追加操作，其中值为：%v，长度为%v，容量为%v \n", s8, len(s8), cap(s8))
-
-	// 切片追加切片
-	s9 := []string{"suzhou", "wuhan", "xian"}
-	s8 = append(s8, s9...) // 将切片s9追加到切片s8
-	fmt.Printf("切片 append 追加切片操作，其中值为：%v，长度为%v，容量为%v \n", s8, len(s8), cap(s8))
 
 	// Slice 也可以被 `copy`。创建一个空的和 `s` 有相同长度的切片 `c`，并且将 `s` 复制给 `c`。
 	s10 := []string{"a", "b", "c"}
