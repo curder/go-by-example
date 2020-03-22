@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
+// 数组是同一种数据类型存放元素的容器，在定义数组的时候必须定义元素类型和存储的长度。
 func main() {
-	// 数组是同一种数据类型存放元素的容器，在定义数组的时候必须定义元素类型和存储的长度。
 	// 数组 `a` 来存放刚好 5 个 `int`。元素的类型和长度都是数组类型的一部分。
 	var a [5]int
 	fmt.Println("初始化数组a的值:", a)
@@ -85,7 +85,7 @@ func main() {
 	a9 := [...]int{1, 3, 5, 7, 8}
 	for index, value := range a9 {
 		for index2, value2 := range a9[index+1:] {
-			if (value+value2 == 8) {
+			if value+value2 == 8 {
 				fmt.Printf("%v \n", [...]int{index, index + index2 + 1})
 			}
 		}

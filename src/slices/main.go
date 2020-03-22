@@ -1,4 +1,3 @@
-// Slice 是 Go 中一个关键的数据类型，是一个比数组更加强大的序列接口 http://blog.golang.org/2011/01/go-slices-usage-and-internals.html
 package main
 
 import (
@@ -6,8 +5,12 @@ import (
 	"sort"
 )
 
+// Slice 是 Go 中一个关键的数据类型，是一个比数组更加强大的序列接口
+// 不像数组，Slice 的类型仅有它所包含的元素决定（不像数组中还需要元素的个数）。
+// 要创建一个长度非零的空Slice，需要使用内建的方法 `make`。
+// http://blog.golang.org/2011/01/go-slices-usage-and-internals.html
+
 func main() {
-	// 不像数组，slice 的类型仅有它所包含的元素决定（不像数组中还需要元素的个数）。要创建一个长度非零的空slice，需要使用内建的方法 `make`。
 	// 切片的定义
 	var s1 []int
 	var s2 []string
