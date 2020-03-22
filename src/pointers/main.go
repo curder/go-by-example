@@ -21,7 +21,7 @@ func main() {
 
 	// 取地址操作符 & 和取值操作符 * 是一对互补操作符，& 取出地址，* 根据地址取出地址指向的值。
 
-	var p1 *int // nil 指针
+	var p1 *int    // nil 指针
 	p2 := new(int) // new 函数申请一个内存地址
 	fmt.Printf("声明一个空指针p1为：%v，声明一个零值的指针p2为：%v\n", p1, p2)
 	fmt.Printf("获取修改p2前的值：%v\n", *p2)
