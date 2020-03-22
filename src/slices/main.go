@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 // Slice 是 Go 中一个关键的数据类型，是一个比数组更加强大的序列接口
@@ -100,10 +99,4 @@ func main() {
 		}
 	}
 	fmt.Println("2d: ", twoD)
-
-	// 切片的排序
-	s20 := []int{1, 9, 5, 6, 7, 3, 2, 8, 4}
-	sort.Ints(s20)
-	fmt.Printf("对切片s20进行排序后的切片s20的值：%v", s20)
-
 }

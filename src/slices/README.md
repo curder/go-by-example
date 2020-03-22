@@ -3,3 +3,4 @@
 - [append追加切片](/src/slices/append_slice_test.go)
 - [copy拷贝切片](/src/slices/copy_slice_test.go)
 - [append删除切片元素](/src/slices/delete_slice_item_test.go)
+- [sort切片排序](/src/slices/sort_slice_test.go)
