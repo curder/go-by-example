@@ -1,3 +1,4 @@
 - [切片](/src/slices/main.go)
 - [make创建切片](/src/slices/make_slice_test.go)
 - [append追加切片](/src/slices/append_slice_test.go)
+- [copy拷贝切片](/src/slices/copy_slice_test.go)
