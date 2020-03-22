@@ -50,9 +50,9 @@ func main() {
 	// const中每新增一行常量声明将使iota计数一次(iota可理解为const语句块中的行索引)。
 	// 使用iota能简化定义，在定义枚举时很有用。
 	const (
-		n4 = iota //0
-		n5        //1
-		n6        //2
+		n4 = iota // 0
+		n5        // 1
+		n6        // 2
 	)
 	fmt.Printf("n4: %d \n", n4)
 	fmt.Printf("n5: %d \n", n5)

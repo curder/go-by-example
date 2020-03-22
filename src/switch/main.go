@@ -3,6 +3,8 @@ package main
 import "fmt"
 import "time"
 
+// 使用switch可以大量的减少判断
+
 func main() {
 	i := 2
 	// 基本的 switch 结构
@@ -16,7 +18,7 @@ func main() {
 	}
 
 	// 或者将变量的定义也一并写在switch结构体，这样结构体外就不会存在多余的变量
-	switch i:= 3; i {
+	switch i := 3; i {
 	case 1:
 		fmt.Println("一")
 	case 2:
@@ -37,8 +39,8 @@ func main() {
 	t := time.Now()
 	switch {
 	case t.Hour() < 12:
-		fmt.Println("上午")
+		fmt.Println("现在是上午")
 	default:
-		fmt.Println("下午")
+		fmt.Println("现在是下午")
 	}
 }
