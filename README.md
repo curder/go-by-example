@@ -20,6 +20,7 @@
 - [指针](/src/pointers/main.go)
 - [Map](/src/maps/main.go)
 - [函数](/src/functions/main.go)
+  - [函数的定义](/src/functions/define_function_test.go)
   - [fmt](/src/functions/fmts/main.go)
 - [Panic](/src/panic/main.go)
 - [结构体](/src/structures/README.md)
