@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 	"strings"
+	"unicode"
 )
 
 // Go语言中的字符串以原生数据类型出现。
 // 使用字符串就像使用其他原生数据类型（int、bool、float32、float64等）一样。
-
 
 func main() {
 	// 当需要转义 \ 的时候，可以使用 \\ 转义 \
@@ -63,7 +63,7 @@ Volumes
 	// 分割字符串
 	s7 := "hello world"
 	s8 := strings.Split(s7, " ")
-	fmt.Printf("使用空格分割s7字符串的值为：%v，类型为：%T\n" , s8, s8)
+	fmt.Printf("使用空格分割s7字符串的值为：%v，类型为：%T\n", s8, s8)
 
 	// join操作
 	fmt.Println("使用｜合并字符串：", strings.Join(s8, "｜"))
@@ -76,6 +76,16 @@ Volumes
 	fmt.Printf("变量s7后缀是 world 吗？ %v\n", strings.HasSuffix(s7, "world"))
 
 	// 查找子字符串位置
-	fmt.Printf("hello world 中第一个o出现的索引位置是：%d\n", strings.Index(s7,"o"))
+	fmt.Printf("hello world 中第一个o出现的索引位置是：%d\n", strings.Index(s7, "o"))
 	fmt.Printf("hello world 中第一个a出现的索引位置是：%d\n", strings.Index(s7, "a")) // 不存在子字符串默认返回 -1
+
+	// 判断字符串中汉字的数量
+	s9 := "hello你好呀👋"
+	var count int
+	for _, c := range s9 {
+		if unicode.Is(unicode.Han, c) { // 判断字符是不是汉字 https://golang.org/pkg/unicode/
+			count++
+		}
+	}
+	fmt.Printf("字符串`%s`中出现的汉字个数是%d", s9, count)
 }
