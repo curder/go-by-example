@@ -2,6 +2,28 @@ package main
 
 import "fmt"
 
+func main() {
+	fmt.Printf("1 + 2 = %d\n", Plus(1, 2))
+	f7()
+
+	fmt.Println("defer")
+
+	fmt.Println("函数f8返回：", f8())   // 5
+	fmt.Println("函数f9返回：", f9())   // 6
+	fmt.Println("函数f10返回：", f10()) // 5
+	fmt.Println("函数f11返回：", f11()) // 5
+	f12()                          // 1
+
+	v13 := f13 // 将函数赋值给变量，函数变量
+	fmt.Printf("f13的类型是：%T, f14的类型是：%T \n", v13, f14)
+
+	f15(f14) // 传递函数类型参数
+
+	fmt.Printf("函数f17返回的是函数类型的值：%T\n", f17(f14))
+
+	fmt.Println("执行闭包函数f18的值为：", f18(200)(100))
+}
+
 // 求和函数
 func Plus(a int, b int) int {
 	return a + b // Go 需要明确的返回值，它不会自动返回最后一个表达式的值
@@ -90,26 +112,4 @@ func f18(x int) func(int) int {
 	return func(y int) int {
 		return x + y
 	}
-}
-
-func main() {
-	fmt.Printf("1 + 2 = %d\n", Plus(1, 2))
-	f7()
-
-	fmt.Println("defer")
-
-	fmt.Println(f8())  // 5
-	fmt.Println(f9())  // 6
-	fmt.Println(f10()) // 5
-	fmt.Println(f11()) // 5
-	f12()              // 1
-
-	v13 := f13 // 将函数赋值给变量，函数变量
-	fmt.Printf("f13的类型是：%T, f14的类型是：%T \n", v13, f14)
-
-	f15(f14) // 传递函数类型参数
-
-	fmt.Printf("函数f17返回的是函数类型的值：%T\n", f17(f14))
-
-	fmt.Println("执行闭包函数f18的值为：", f18(200)(100))
 }

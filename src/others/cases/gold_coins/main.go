@@ -45,4 +45,7 @@ func dispatchCoin() (left int) {
 func main() {
 	left := dispatchCoin()
 	fmt.Println("最终剩下", left, "个金币")
+	for name, number := range distributions {
+		fmt.Printf("用户%s，获得%d个金币 \n", name, number)
+	}
 }
