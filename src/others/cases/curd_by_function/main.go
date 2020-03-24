@@ -39,7 +39,7 @@ func Store() {
 	Class[id] = &Student{id: id, name: name}
 }
 
-func Update()  {
+func Update() {
 	var (
 		id   int
 		name string
