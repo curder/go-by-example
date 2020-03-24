@@ -30,6 +30,7 @@
   - [结构体变量](/src/structures/structure_variable_test.go)
   - [结构体指针](/src/structures/structure_pointer_test.go)
   - [结构体接收者](/src/structures/structure_receiver_test.go)
+  - [结构体的初始化](/src/structure/structure_initialization_test.go)
   - [结构体继承](/src/structures/structure_extension_test.go)
 - [接口](/src/interfaces/main.go)
   - [接口定义](/src/interfaces/interface_definition_test.go)
