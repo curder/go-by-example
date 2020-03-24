@@ -15,7 +15,7 @@ func (a Animal) Move() string {
 }
 
 type Dog struct {
-	feet uint8
+	feet   uint8
 	Animal // 匿名嵌套结构体，在结构体 Animal 中定义的方法 Dog 结构体提也拥有了
 }
 
