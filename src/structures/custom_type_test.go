@@ -12,5 +12,5 @@ type myInt int
 
 func TestCustomType(t *testing.T)  {
 	var n1 myInt = 100
-	t.Logf("n1的值为：%d，类型为：%T \n", n1, n1)
+	t.Logf("n1的值为：%v，类型为：%T \n", n1, n1)
 }

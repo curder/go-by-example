@@ -13,7 +13,7 @@ import (
 //   type 类型名 struct {
 //      字段名 字段类型
 //      字段名 字段类型
-//      …
+//      ...
 //   }
 
 type Person struct {

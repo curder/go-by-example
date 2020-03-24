@@ -27,6 +27,7 @@
   - [自定义类型](/src/structures/custom_type_test.go)
   - [类型别名](/src/structures/type_alias_test.go)
   - [结构体的定义](/src/structures/structure_definition_test.go)
+  - [结构体变量](/src/structures/structure_variable_test.go)
   - [结构体指针](/src/structures/structure_pointer_test.go)
   - [结构体继承](/src/structures/structure_extension_test.go)
 - [接口](/src/interfaces/main.go)
