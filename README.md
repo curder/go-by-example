@@ -37,6 +37,7 @@
   - [接口的定义](/src/interfaces/interface_definition_test.go)
   - [接口的实现](/src/interfaces/interface_achieve_test.go)
   - [指针接受者方法](/src/interfaces/interface_pointer_test.go)
+  - [接口嵌套](/src/interfaces/multiple_interfaces_for_the_same_structure_test.go)
 - [时间和时间戳](/src/time/time_test.go)
   - [定时器](/src/time/timer_test.go)
   - [时间间隔](/src/time/time_duration_test.go)

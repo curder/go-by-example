@@ -1,3 +1,4 @@
 - [接口的定义](/src/interfaces/interface_definition_test.go)
 - [接口的实现](/src/interfaces/interface_achieve_test.go)
 - [指针接受者方法](/src/interfaces/interface_pointer_test.go)
+- [接口嵌套](/src/interfaces/multiple_interfaces_for_the_same_structure_test.go)
