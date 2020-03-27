@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -14,18 +13,17 @@ func TestEmptyInterfaceForMap(t *testing.T) {
 	v1 := make(map[string]interface{}, 10)
 	v1["name"] = "curder"
 	v1["age"] = 28
-	v1["hobby"] = "coding"
+	v1["hobby"] = [...]string{"coding", "music", "study"}
 	v1["married"] = false
 
 	t.Logf("\nv1的值为：%#v", v1)
 }
 
-// 空接口作为函数参数
-func show(a interface{}) {
-	fmt.Printf("类型: %T 值: %v\n", a, a)
-}
-
 func TestEmptyInterfaceForFunction(t *testing.T) {
+	// 空接口作为函数参数
+	var show = func(a interface{}) {
+		t.Logf("类型: %T 值: %v\n", a, a)
+	}
 	show(false)
 	show(nil)
 
