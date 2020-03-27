@@ -2,3 +2,4 @@
 - [接口的实现](/src/interfaces/interface_achieve_test.go)
 - [指针接受者方法](/src/interfaces/interface_pointer_test.go)
 - [接口嵌套](/src/interfaces/multiple_interfaces_for_the_same_structure_test.go)
+- [空接口](/src/interfaces/empty_interface_test.go)
