@@ -1,0 +1,2 @@
+- [接口的定义](/src/interfaces/interface_definition_test.go)
+- [接口的实现](/src/interfaces/interface_achieve_test.go)

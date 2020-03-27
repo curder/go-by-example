@@ -33,7 +33,7 @@
   - [结构体的初始化](/src/structure/structure_initialization_test.go)
   - [结构体继承](/src/structures/structure_extension_test.go)
   - [结构体和JSON](/src/structures/structure_json_test.go)
-- [接口](/src/interfaces/main.go)
+- [接口](/src/interfaces/README.md)
   - [接口定义](/src/interfaces/interface_definition_test.go)
   - [接口的实现](/src/interfaces/interface_achieve_test.go)
 - [时间和时间戳](/src/time/time_test.go)

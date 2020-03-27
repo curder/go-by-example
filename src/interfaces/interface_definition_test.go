@@ -12,35 +12,36 @@ import (
 //}
 
 // 定义接口
-type Speaker interface {
+type speaker interface {
 	speak() string
 }
 
-type Dog struct{}
-type Cat struct{}
-type Person struct{}
+type dog struct{}
+type cat struct{}
+type person struct{}
 
-// 一个结构体实现了接口中规定的所有的方法，那么这个结构体就实现了这个接口，可以称之为接口类型的结构体。
-func (d Dog) speak() string {
+// 一个结构体实现了接口中规定的所有的方法，那么这个结构体就实现了这个接口
+// 可以称之为接口类型的结构体
+func (d dog) speak() string {
 	return "wang wang wang~"
 }
 
-func (c Cat) speak() string {
+func (c cat) speak() string {
 	return "miao miao miao~"
 }
 
-func (p Person) speak() string {
+func (p person) speak() string {
 	return "ying ying ying~"
 }
 
-func speak(speaker Speaker) string {
+func speak(speaker speaker) string {
 	return speaker.speak()
 }
 
 func TestInterfaceDefinition(t *testing.T) {
-	var dog Dog
-	var cat Cat
-	var person Person
+	var dog dog
+	var cat cat
+	var person person
 	// 使用接口前这样调用
 	t.Logf("\n狗声：%s 猫叫：%s 人声：%s", dog.speak(), cat.speak(), person.speak())
 
