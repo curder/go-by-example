@@ -1,0 +1,3 @@
+- [包的导入导出练习](/src/packages/practices/README.md)
+  - [包定义](/src/packages/practices/calc/tools.go)
+  - [包导入](/src/packages/practices/snow/main.go)
