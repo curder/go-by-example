@@ -49,10 +49,10 @@
 - [文件操作](/src/logs/README.md)
   - [文件读取](/src/logs/read_file_test.go)
   - [文件写入](/sr/logs/write_file_test.go)
-- [时间和时间戳](/src/time/time_test.go)
-  - [定时器](/src/time/timer_test.go)
-  - [时间间隔](/src/time/time_duration_test.go)
-  - [时间格式化](/src/time/time_format_test.go)
+- [时间和时间戳](/src/times/time_test.go)
+  - [定时器](/src/times/timer_test.go)
+  - [时间间隔](/src/times/time_duration_test.go)
+  - [时间格式化](/src/times/time_format_test.go)
 - [日志](src/logs/main.go)
 
 
