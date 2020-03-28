@@ -29,7 +29,7 @@ func main() {
 	reflectOf(e) // type:book kind:struct
 
 	var f int64 = 100
-	reflectSet(&f) // 修改值
+	reflectSet(&f) // 修改值，必须传递变量的指针
 	fmt.Println(f) // 200
 }
 
