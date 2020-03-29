@@ -54,6 +54,8 @@
   - [时间间隔](/src/times/time_duration_test.go)
   - [时间格式化](/src/times/time_format_test.go)
 - [日志](src/logs/main.go)
+    - [日志-终端输出](/src/others/cases/logger/console_logger_test.go)
+    - [日志-文件输出](/src/others/cases/logger/file_logger_test.go)
 - [反射](/src/reflects/main.go)
 
 
@@ -62,5 +64,3 @@
     - [递归](/src/others/cases/recursive/main.go)
     - [学员增删改查操作-函数版](/src/others/cases/curd_by_function/main.go)
     - [学员增删改查操作-方法版](/src/others/cases/curd_by_structure/main.go)
-    - [日志-终端输出](/src/others/cases/logger/console_logger_test.go)
-    - [日志-文件输出](/src/others/cases/logger/file_logger_test.go)
