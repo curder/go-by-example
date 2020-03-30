@@ -57,7 +57,7 @@
     - [日志-终端输出](/src/others/cases/logger/console_logger_test.go)
     - [日志-文件输出](/src/others/cases/logger/file_logger_test.go)
 - [反射](/src/reflects/main.go)
-  - [init解析](/src/reflects/init/parse.go)
+  - [ini解析](/src/reflects/ini/parse.go)
 
 
 - [小案例](/src/others/cases/README.md)
