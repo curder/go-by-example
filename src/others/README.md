@@ -3,7 +3,4 @@
     - [递归](/src/others/cases/recursive/main.go)
     - [学员增删改查操作-函数版](/src/others/cases/curd_by_function/main.go)
     - [学员增删改查操作-方法版](/src/others/cases/curd_by_structure/main.go)
-    - [读文件](/src/others/cases/file/read_file.go)
-    - [写文件](/src/others/cases/file/write_file.go)
-    - [日志-终端输出](/src/others/cases/logger/console_logger_test.go)
-    - [日志-文件输出](/src/others/cases/logger/file_logger_test.go)
+    - [变量类型转换](/src/others/transform_data_type_test.go)
