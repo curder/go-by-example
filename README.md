@@ -59,7 +59,10 @@
     - [日志-文件输出](/src/others/cases/logger/file_logger_test.go)
 - [反射](/src/reflects/main.go)
   - [ini解析](/src/reflects/ini/parse.go)
-
+- [并发](/src/concurrences/README.md)
+  - [并发启动单个goroutine](/src/concurrences/signal_go_routine_test.go)
+  - [并发启动多个goroutine](/src/concurrences/multi_go_routine_test.go)
+  - [并发回调函数方式goroutine](/src/concurrences/callback_go_routine_test.go)
 
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
