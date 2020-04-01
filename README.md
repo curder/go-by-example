@@ -64,6 +64,7 @@
   - [并发启动多个goroutine](/src/concurrences/multi_go_routine_test.go)
   - [并发回调函数方式goroutine](/src/concurrences/callback_go_routine_test.go)
   - [GOMAXPROCS](/src/concurrences/go_max_procs_test.go)
+  - [通道channel](/src/concurrences/channels/channel_test.go)
 
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
