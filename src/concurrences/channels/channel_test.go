@@ -62,20 +62,19 @@ func TestCloseChannel(t *testing.T) {
 	ch1 := make(chan bool, 2)
 
 	ch1 <- true
-	t.Logf("第一次往通道中写值%v \n",true)
+	t.Logf("第一次往通道中写值%v \n", true)
 	ch1 <- true
-	t.Logf("第二次往通道中写值%v \n",true)
-
+	t.Logf("第二次往通道中写值%v \n", true)
 
 	close(ch1) // 往通道写完值记得使用close关闭通道，否则会出现deadlock
 
-	x, ok := <- ch1
-	t.Logf("第一次从通道中取值%v, %v \n",x,ok)
-	x, ok = <- ch1
-	t.Logf("第二次从通道中取值%v, %v \n",x,ok)
+	x, ok := <-ch1
+	t.Logf("第一次从通道中取值%v, %v \n", x, ok)
+	x, ok = <-ch1
+	t.Logf("第二次从通道中取值%v, %v \n", x, ok)
 
-	x, ok = <- ch1 // 再读就读取不到数据
-	t.Logf("第三次从通道中取值%v, %v \n",x,ok)
+	x, ok = <-ch1 // 再读就读取不到数据
+	t.Logf("第三次从通道中取值%v, %v \n", x, ok)
 }
 
 // 练习
