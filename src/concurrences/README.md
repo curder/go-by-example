@@ -3,6 +3,7 @@
 - [并发回调函数方式goroutine](/src/concurrences/callback_go_routine_test.go)
 - [GOMAXPROCS](/src/concurrences/go_max_procs_test.go)
 - [通道channel](/src/concurrences/channels/channel_test.go)
+- [通道小练习](/src/concurrences/channels/worker_pool_demo_test.go)
 
 ## channel 常见的异常总结
 | channel | nil | 非空 | 空 | 满了 | 没满 |
