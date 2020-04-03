@@ -1,2 +1,3 @@
 - [通道channel](/src/concurrences/channels/channel_test.go)
 - [通道小练习](/src/concurrences/channels/worker_pool_demo_test.go)
+- [通道select](/src/concurrences/channels/channel_select_test.go)
