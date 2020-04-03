@@ -2,3 +2,4 @@
 - [并发安全和互斥锁](/src/concurrences/syncs/multi_go_routine_modify_global_variable_by_sync_mutex_test.go)
 - [并发安全和读写互斥锁](/src/concurrences/syncs/multi_go_routine_modify_global_variable_by_sync_rw_mutex_test.go)
 - [sync.WaitGroup](/src/concurrences/syncs/go_routine_sync_wait_group_test.go)
+- [sync.Once](/src/concurrences/syncs/go_routine_sync_once_test.go)
