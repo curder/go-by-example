@@ -68,6 +68,9 @@
     - [通道channel](/src/concurrences/channels/channel_test.go)
     - [通道小练习](/src/concurrences/channels/worker_pool_demo_test.go)
     - [通道select](/src/concurrences/channels/channel_select_test.go)
+  - [并发操作全局变量问题](/src/concurrences/syncs/multi_go_routine_modify_global_variable_test.go)
+  - [并发安全和互斥锁](/src/concurrences/syncs/multi_go_routine_modify_global_variable_by_sync_mutex_test.go)
+  - [并发安全和读写互斥锁](/src/concurrences/syncs/multi_go_routine_modify_global_variable_by_sync_rw_mutex_test.go)
 
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
