@@ -63,7 +63,7 @@ func main() {
 		n7 = iota // 0
 		n8        // 1
 		_
-		n10  // 3
+		n10 // 3
 	)
 	fmt.Printf("n7: %d \n", n7)
 	fmt.Printf("n8: %d \n", n8)

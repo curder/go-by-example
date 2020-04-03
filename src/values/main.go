@@ -15,8 +15,8 @@ func main() {
 	// 十进制整型
 	var i1 = 101
 	fmt.Printf("i1十进制值：%d\n", i1)
-	fmt.Printf("i1二进制值：%b\n", i1) // 转换成二进制输出
-	fmt.Printf("i1八进制值：%o\n", i1) // 转换成八进制输出
+	fmt.Printf("i1二进制值：%b\n", i1)  // 转换成二进制输出
+	fmt.Printf("i1八进制值：%o\n", i1)  // 转换成八进制输出
 	fmt.Printf("i1十六进制值：%x\n", i1) // 转换成十六进制输出
 
 	// 八进制整型

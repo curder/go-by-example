@@ -10,7 +10,7 @@ var wg sync.WaitGroup
 
 func TestMaxProcs(t *testing.T) {
 	runtime.GOMAXPROCS(2) // 默认CPU的核心数，默认跑满整个CPU
-	
+
 	wg.Add(2)
 	go a(t)
 	go b(t)

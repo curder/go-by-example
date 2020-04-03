@@ -6,7 +6,7 @@ import (
 
 // 向文件写日志相关内容
 func TestFileLogger(t *testing.T) {
-	log := NewFileLog("warning", "./", "go.log", 10 * 1024 * 1024) // 文件大小 10M 切割
+	log := NewFileLog("warning", "./", "go.log", 10*1024*1024) // 文件大小 10M 切割
 
 	for {
 		log.Debug("this is a debug log.")

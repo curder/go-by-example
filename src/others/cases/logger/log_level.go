@@ -53,5 +53,3 @@ func getLogLevel(logLevel LogLevel) string {
 		return "DEBUG"
 	}
 }
-
-

@@ -93,7 +93,7 @@ func TestSendAndReceiveChannelDemo(t *testing.T) {
 	}()
 
 	go func() { // 开启goroutine从ch1中接收值，并将该值的平方发送到ch2中
-		for {   // 循环读取ch1通道数据
+		for { // 循环读取ch1通道数据
 			val, ok := <-ch1
 			if !ok { // 当ok值状态不为nil的时候取值传入到通道ch2
 				break

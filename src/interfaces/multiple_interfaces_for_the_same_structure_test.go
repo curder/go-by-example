@@ -24,13 +24,13 @@ type MultipleCat struct {
 }
 
 // 实现Mover接口的move方法
-func (m MultipleCat) move()  {
+func (m MultipleCat) move() {
 }
 
 // 实现Eater接口的eat方法
-func (m MultipleCat) eat()  {
+func (m MultipleCat) eat() {
 }
 
-func TestMultipleInterfacesForTheSameStructure(t *testing.T)  {
+func TestMultipleInterfacesForTheSameStructure(t *testing.T) {
 
 }

@@ -33,7 +33,7 @@ func NewFileLog(l string, filePath string, fileName string, maxFileSize int64) *
 }
 
 // 初始化文件句柄
-func (l *FileLogger) initFile() (error) {
+func (l *FileLogger) initFile() error {
 	fullName := path.Join(l.FilePath, l.FileName)
 	fileObject, err := os.OpenFile(fullName, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
