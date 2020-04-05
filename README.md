@@ -75,6 +75,7 @@
   - [sync.Once](/src/concurrences/syncs/go_routine_sync_once_test.go)
   - [sync.Map](/src/concurrences/syncs/go_routine_sync_map_test.go)
 - [httpServer](/src/http/server/main.go)
+- [httpClient](/src/http/client/main.go)
 
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
