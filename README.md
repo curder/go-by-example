@@ -77,6 +77,7 @@
 - [httpServer](/src/http/server/main.go)
 - [httpClient](/src/http/client/main.go)
 - [MySQL](/src/databases/mysql/README.md)
+- [context.Context](/src/contexts/why_we_should_use_context_test.go)
 
 - [小案例](/src/others/cases/README.md)
     - [根据人名分金币](/src/others/cases/gold_coins/main.go)
