@@ -4,6 +4,5 @@ package main
 import "fmt"
 
 func main() {
-	// 使用包的函数
-	fmt.Println("hello world")
+	fmt.Println("hello world") // 使用fmt包的函数
 }
