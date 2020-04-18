@@ -55,7 +55,7 @@ func f5(arg1, arg2 int, arg3, arg4, arg5 string, arg6, arg7, arg8 bool) bool {
 	return false
 }
 
-// 可变长参数
+// 可变参数
 func f6(arg1 string, arg2 ...int) bool {
 	fmt.Println(arg1)
 	fmt.Println(arg2) // arg2的类型是切片 []int
