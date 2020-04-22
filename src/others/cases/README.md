@@ -6,3 +6,4 @@
 - [写文件](/src/others/cases/file/write_file.go)
 - [日志-终端输出](/src/others/cases/logger/console_logger_test.go)
 - [日志-文件输出](/src/others/cases/logger/file_logger_test.go)
+- [迷宫-广度优先算法](/src/others/cases/maze/main.go)
