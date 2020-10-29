@@ -7,7 +7,7 @@
   - [整数值](/src/data-types/numbers/main.go)
   - [字符串](/src/data-types/string/main.go)
   - [数组](/src/data-types/arrays/main.go)
-  - [切片](/src/data-types/slices/README.go)
+  - [切片](/src/data-types/slices/README.md)
     - [切片](/src/data-types/slices/main.go)
     - [make创建切片](/src/data-types/slices/make_slice_test.go)
     - [append追加切片](/src/data-types/slices/append_slice_test.go)
