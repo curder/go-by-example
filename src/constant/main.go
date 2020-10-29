@@ -9,20 +9,20 @@ import "math"
 const s string = "constant"
 
 func main() {
-	fmt.Println(s)
+	fmt.Println("常量s的值：", s)
 
 	// const可以出现在任何允许var出现的地方
 	const n = 500000000
 
 	// 常数表达式可以执行任意精度的运算
 	const fl = 3e20 / n
-	fmt.Println(fl)
+	fmt.Println("常量fl的值：", fl)
 
 	// 数值型常量是没有确定的类型的，直到它们被给定了一个类型，比如说一次显示的类型转化。
-	fmt.Println(int64(fl))
+	fmt.Println("对常量fl显示的转换成int64：", int64(fl))
 
 	// 当上下文需要时，一个数可以被给定一个类型，比如变量赋值或者函数调用。举个例子，这里的 `math.Sin` 函数需要一个 `float64` 的参数。
-	fmt.Println(math.Sin(n))
+	fmt.Println("对常量取Sin值：", math.Sin(n))
 
 	// 多个常量也可以一起声明
 	const (
